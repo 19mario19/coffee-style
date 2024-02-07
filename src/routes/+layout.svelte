@@ -5,8 +5,14 @@
   import Footer from "$lib/components/Footer.svelte"
   import Cart from "$lib/components/Cart/Cart.svelte"
   import Subscribe from "$lib/shared/Subscribe.svelte"
-
+ 
   import { shoppingCart } from "$lib/classes/shoppingCart"
+  import { page } from "$app/stores"
+
+
+  let notToRenderSubscribe = ["/contact", "/styleguide"]
+
+  let param = $page.route.id?.split("/") ?? []
 
   export let data: LayoutData
 </script>
@@ -17,7 +23,9 @@
 <div class="layout">
   <Cart cartList={$shoppingCart} />
   <slot />
-  <Subscribe />
+  {#if !notToRenderSubscribe.includes(param[1] ?? "")}
+    <Subscribe />
+  {/if}
   <Footer />
 </div>
 

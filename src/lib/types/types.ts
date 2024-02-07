@@ -13,15 +13,24 @@ type CardDetailed = {
 type Person = Pick<CardDetailed, "title" | "img" | "description"> & {
   position: string
 }
+enum Route {
+  Home = "/",
+  Products = "/products",
+  Blog = "/blog",
+  About = "/about",
+  Contact = "/contact",
+  StyleGuide = "/guide",
+}
+
 
 type NavbarItem = {
-  id: ID
-  name: string
-  link: string
+  id?: ID
+  name: string | ECategory
+  link?: Route
 }
 
 type NavbarList = {
-  logo: string
+  logo?: string
   list: NavbarItem[]
   active: NavbarItem
 }
@@ -34,11 +43,11 @@ type Dimensions = {
 }
 
 enum ECategory {
-  All = "all",
-  Mugs = "mugs",
-  Others = "others",
-  Premium = "premium",
-  TeaMugs = "tea",
+  All = "All Products",
+  Mugs = "Coffee Mugs",
+  Others = "Others",
+  Premium = "Premium",
+  TeaMugs = "Tea Mugs",
 }
 
 type Product = {
@@ -102,7 +111,8 @@ enum ContainerDimentions {
   Small = "max-width: 1000px",
 }
 
-export { EPayment, ECategory, EBlogCategory, ContainerDimentions }
+
+export { EPayment, ECategory, EBlogCategory, ContainerDimentions, Route }
 export type {
   ID,
   CardDetailed,

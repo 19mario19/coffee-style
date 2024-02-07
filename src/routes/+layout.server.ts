@@ -1,23 +1,20 @@
 import type { LayoutServerLoad } from "./$types"
-import type { CartList, NavbarList } from "$lib/types/types"
+import { Route, type NavbarList } from "$lib/types/types"
 import logo from "$lib/img/Navbar/icon.png"
 
 let navbarList: NavbarList = {
   logo,
   list: [
-    { id: 0, name: "Home", link: "/" },
-    { id: 1, name: "Our Products", link: "/products" },
-    { id: 2, name: "Blog", link: "/blog" },
-    { id: 3, name: "About", link: "/about" },
-    { id: 4, name: "Contact", link: "/contact" },
-    { id: 5, name: "Style Guide", link: "/guide" },
+    { id: 0, name: "Home", link: Route.Home },
+    { id: 1, name: "Our Products", link: Route.Products },
+    { id: 2, name: "Blog", link: Route.Blog },
+    { id: 3, name: "About", link: Route.About },
+    { id: 4, name: "Contact", link: Route.Contact },
+    { id: 5, name: "Style Guide", link: Route.StyleGuide },
   ],
-  active: { id: 0, name: "Home", link: "/" },
+  active: { id: 0, name: "Home", link: Route.Home },
 }
 
-
-
 export const load = (async () => {
-  
   return { navbarList }
 }) satisfies LayoutServerLoad

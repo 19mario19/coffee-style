@@ -28,7 +28,7 @@ const db: Product[] = [
     sale: false,
     featured: false,
     dimensions: { length: 1.8, height: 2.4, width: 1.2, weight: 2.2 },
-    category: [ECategory.Mugs],
+    category: [ECategory.Premium],
   },
   {
     id: 3,
@@ -53,7 +53,7 @@ const db: Product[] = [
     sale: false,
     featured: false,
     dimensions: { length: 1.5, height: 2.2, width: 1.0, weight: 1.8 },
-    category: [ECategory.Mugs],
+    category: [ECategory.TeaMugs],
   },
   {
     id: 21,
@@ -79,7 +79,7 @@ const db: Product[] = [
     sale: true,
     featured: false,
     dimensions: { length: 1.4, height: 2.0, width: 0.9, weight: 1.5 },
-    category: [ECategory.Mugs],
+    category: [ECategory.TeaMugs],
   },
   {
     id: 12,
@@ -104,7 +104,7 @@ const db: Product[] = [
     sale: false,
     featured: false,
     dimensions: { length: 1.8, height: 2.4, width: 1.2, weight: 2.2 },
-    category: [ECategory.Mugs],
+    category: [ECategory.Premium],
   },
   {
     id: 32,
@@ -117,7 +117,7 @@ const db: Product[] = [
     sale: true,
     featured: false,
     dimensions: { length: 1.4, height: 2.0, width: 0.9, weight: 1.5 },
-    category: [ECategory.Mugs],
+    category: [ECategory.Others],
   },
   {
     id: 13,

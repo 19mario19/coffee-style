@@ -20,6 +20,6 @@
     height: 100%;
     background-size: cover;
     background-position: center;
-    background-attachment: fixed; /* Create parallax effect */
+    background-attachment: fixed;
   }
 </style>

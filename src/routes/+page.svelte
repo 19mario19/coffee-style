@@ -10,7 +10,6 @@
 
   export let data: PageData
 
-  console.log(data)
 </script>
 
 <Section1 section1={data.section1} />

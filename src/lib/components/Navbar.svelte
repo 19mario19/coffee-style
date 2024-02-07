@@ -1,10 +1,9 @@
 <script lang="ts">
   import Container from "$lib/shared/Container.svelte"
-  import { ContainerDimentions, type NavbarList } from "$lib/types/types"
+  import { ContainerDimentions, Route, type NavbarList } from "$lib/types/types"
   import cart from "$lib/img/Navbar/cart.png"
   import mobileIcon from "$lib/img/Navbar/mobile.png"
   import { shoppingCart as store } from "$lib/classes/shoppingCart"
-
   import { Toggle } from "$lib/classes/cartToggle"
   const toggleCart = new Toggle()
   function showCart() {
@@ -14,11 +13,11 @@
   export let data: NavbarList = {
     logo: "",
     list: [
-      { id: 0, name: "Home", link: "/" },
-      { id: 1, name: "About", link: "/about" },
-      { id: 0, name: "Contacts", link: "/contacts" },
+      { id: 0, name: "Home", link: Route.Home },
+      { id: 1, name: "About", link: Route.About },
+      { id: 0, name: "Contacts", link: Route.Contact },
     ],
-    active: { id: 0, name: "Home", link: "/" },
+    active: { id: 0, name: "Home", link: Route.Home },
   }
 
   let showMenu = true
@@ -35,7 +34,7 @@
     <nav>
       <div class="desktop">
         <div class="left">
-          <a href="/">
+          <a href={Route.Home}>
             <img src={data.logo} alt="Logo" />
           </a>
         </div>
@@ -56,11 +55,11 @@
           >
         </div>
       </div>
-
       <!-- end desktop -->
+      
       <div class="mobile">
         <div class="left">
-          <a href="/" on:click={disableMenu}>
+          <a href={Route.Home} on:click={disableMenu}>
             <img src={data.logo} alt="Logo" />
           </a>
         </div>
