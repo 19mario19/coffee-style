@@ -56,7 +56,7 @@
 
   .card {
     display: grid;
-    grid-template-rows: repeat(2, 1fr);
+    grid-template-columns: repeat(2, 1fr);
 
     gap: 2rem;
 
@@ -156,5 +156,13 @@
   button.details:hover {
     opacity: 0.75;
     box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+  }
+    /* Media */
+  @media screen and (max-width: 717px) {
+    .card{
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
   }
 </style>

@@ -4,7 +4,6 @@
 
   export let data: PageData
 
-  $: console.log(data)
 </script>
 
 <Section1 products={data.products} blogs={data.blogs} />

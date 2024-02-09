@@ -16,7 +16,7 @@
 
   <div class="bottom">
     <h4>NEW ARTICLE IS LIVE</h4>
-    <h3>{blog.title}</h3>
+    <h3>{blog?.title}</h3>
     <p class="description">{blog.description}</p>
     <a href={`/blogs/${blog.id}`}>READ THE FULL STORY</a>
   </div>

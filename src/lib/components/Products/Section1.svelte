@@ -24,7 +24,7 @@
   }
 
   export let blogs: Blog[]
-  let blog: Blog = blogs[Math.floor(Math.random() * blogs.length - 1)]
+
 
   export let products: Product[]
 
@@ -39,7 +39,6 @@
     }
   }
 
-  $: console.log(filteredProducts, navbarList.active)
 </script>
 
 <Container dimentions={ContainerDimentions.Medium}>
@@ -47,8 +46,8 @@
     <div class="top">
       <h2>Our Products</h2>
       <p class="subtitle">
-        "Discover premium mugs, tea cups, and more – quality crafted for your
-        perfect sipping experience."
+        Discover premium mugs, tea cups, and more – quality crafted for your
+        perfect sipping experience.
       </p>
     </div>
     <div class="main">
@@ -68,7 +67,7 @@
       </div>
       {#if navbarList.active === list[0]}
         <div class="blog">
-          <BlogDetailed {blog} />
+          <BlogDetailed blog={blogs[0]} />
         </div>
       {/if}
     </div>
@@ -91,6 +90,7 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 1rem;
+    margin: 3rem 0;
   }
   /* Media */
   @media screen and (max-width: 717px) {
@@ -125,6 +125,12 @@
     display: flex;
     flex-direction: column;
     gap: 1rem;
+    margin: 1rem 0;
+    margin-top: 7rem;
+  }
+
+  .categories {
+    margin: 2rem;
   }
 
   .categories ul {

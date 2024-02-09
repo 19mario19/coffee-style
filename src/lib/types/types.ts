@@ -10,9 +10,21 @@ type CardDetailed = {
   buttonName?: string
 }
 
-type Person = Pick<CardDetailed, "title" | "img" | "description"> & {
-  position: string
+enum Position {
+  Owner = "brand owner",
+  MugDesigner = "mug designer",
 }
+enum Person {
+  Fred = "Fred Gleason",
+  Isabel = "Isabel Hamill",
+  Maurice = "Maurice Herman",
+}
+
+type Author = Pick<CardDetailed, "img"> & {
+  name: Person
+  position: Position
+}
+
 enum Route {
   Home = "/",
   Products = "/products",
@@ -21,7 +33,6 @@ enum Route {
   Contact = "/contact",
   StyleGuide = "/guide",
 }
-
 
 type NavbarItem = {
   id?: ID
@@ -86,11 +97,10 @@ type Checkout = CartList & {
   payment: EPayment
 }
 enum EBlogCategory {
-  Health = "health",
-  Beans = "beans",
-  BrewingMethods = "brewing-methods",
-  Recipes = "recipes",
-  Lifestyle = "lifestyle",
+  Mugs = "Mugs",
+  Barista = "Barista",
+  Lifestyle = "Lifestyle",
+  Coffee = "coffee",
 }
 
 type Paragraph = Pick<CardDetailed, "subtitle" | "description" | "img"> & {
@@ -103,6 +113,7 @@ type Blog = Omit<CardDetailed, "buttonName"> &
   Pick<Product, "featured"> & {
     list: Paragraph[]
     category: EBlogCategory[]
+    author: Author
   }
 
 enum ContainerDimentions {
@@ -111,12 +122,19 @@ enum ContainerDimentions {
   Small = "max-width: 1000px",
 }
 
-
-export { EPayment, ECategory, EBlogCategory, ContainerDimentions, Route }
+export {
+  Position,
+  Person,
+  EPayment,
+  ECategory,
+  EBlogCategory,
+  ContainerDimentions,
+  Route,
+}
 export type {
   ID,
   CardDetailed,
-  Person,
+  Author,
   NavbarItem,
   NavbarList,
   Product,

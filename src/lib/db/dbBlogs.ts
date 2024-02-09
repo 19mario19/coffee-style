@@ -1,5 +1,7 @@
 import type { Blog } from "$lib/types/types"
-import { EBlogCategory } from "$lib/types/types"
+import { EBlogCategory, Person, Position } from "$lib/types/types"
+
+import { authorsRecord } from "./dbAuthor"
 
 import one from "$lib/img/Blogs/1.jpg"
 import two from "$lib/img/Blogs/2.jpg"
@@ -33,7 +35,8 @@ const dbBlogs: Blog[] = [
         description3: "Third Description 2",
       },
     ],
-    category: [EBlogCategory.Health, EBlogCategory.Beans],
+    author: authorsRecord[Person.Fred],
+    category: [EBlogCategory.Barista, EBlogCategory.Coffee],
   },
   {
     id: 2,
@@ -61,6 +64,7 @@ const dbBlogs: Blog[] = [
         description3: "Third Description 2",
       },
     ],
+    author: authorsRecord[Person.Isabel],
     category: [EBlogCategory.Lifestyle],
   },
   {
@@ -90,7 +94,8 @@ const dbBlogs: Blog[] = [
         description3: "Third Description 2",
       },
     ],
-    category: [EBlogCategory.Recipes],
+    author: authorsRecord[Person.Maurice],
+    category: [EBlogCategory.Mugs],
   },
   {
     id: 4,
@@ -117,7 +122,8 @@ const dbBlogs: Blog[] = [
         description3: "Third Description 2",
       },
     ],
-    category: [EBlogCategory.Recipes],
+    author: authorsRecord[Person.Maurice],
+    category: [EBlogCategory.Coffee],
   },
 ]
 
