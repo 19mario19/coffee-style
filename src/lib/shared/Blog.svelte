@@ -55,8 +55,8 @@
   }
 
   .card {
-    display: grid;
-    grid-template-rows: repeat(2, 1fr);
+   display: flex;
+   flex-direction: column;
 
     gap: 2rem;
 

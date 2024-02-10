@@ -56,18 +56,15 @@
 
   .card {
     display: grid;
-    grid-template-columns: 1fr 2fr;
+    grid-template-columns: 1.3fr 2fr;
 
     gap: 2rem;
 
     overflow: hidden;
 
-
     margin: 0 auto;
 
     margin-bottom: 3rem;
-
-   
   }
 
   .card > * > * {
@@ -86,10 +83,9 @@
       height: auto;
     }
 
-    
-  .card > * > * {
-    text-align: center;
-  }
+    .card > * > * {
+      text-align: center;
+    }
   }
 
   .top {
@@ -156,9 +152,9 @@
     opacity: 0.75;
     box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
   }
-    /* Media */
+  /* Media */
   @media screen and (max-width: 717px) {
-    .card{
+    .card {
       display: flex;
       flex-direction: column;
       gap: 1rem;

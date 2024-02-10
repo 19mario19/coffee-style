@@ -37,18 +37,19 @@
     justify-content: center;
     background-color: var(--light-gray);
     position: relative;
-}
-.overlay {
+
+  }
+  .overlay {
     background-color: white;
     
     position: absolute;
     inset: 50% 0 0 0;
     z-index: 0;
-}
-h2 {
+  }
+  h2 {
     font-size: 35px;
-}
-.top {
+  }
+  .top {
     display: flex;
     flex-direction: column;
     gap: 1rem;
