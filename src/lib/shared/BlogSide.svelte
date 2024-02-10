@@ -25,7 +25,7 @@
   img {
     width: 100%;
     height: 100%;
-    min-height: 300px;
+    min-height: 200px;
     object-fit: cover;
   }
 
@@ -56,13 +56,12 @@
 
   .card {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: 1fr 2fr;
 
     gap: 2rem;
 
     overflow: hidden;
 
-    min-width: 33%;
 
     margin: 0 auto;
 

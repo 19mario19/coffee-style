@@ -97,10 +97,10 @@ type Checkout = CartList & {
   payment: EPayment
 }
 enum EBlogCategory {
-  Mugs = "Mugs",
   Barista = "Barista",
+  Coffee = "Coffee",
   Lifestyle = "Lifestyle",
-  Coffee = "coffee",
+  Mugs = "Mugs",
 }
 
 type Paragraph = Pick<CardDetailed, "subtitle" | "description" | "img"> & {

@@ -22,7 +22,7 @@ const authors: Author[] = [
   },
 ]
 
-let authorsRecord: Record<Person, Author> = {} as Record<Person, Author>
+const authorsRecord: Record<Person, Author> = {} as Record<Person, Author>
 authors.forEach((el) => {
   authorsRecord[el.name] = { ...el }
 })
