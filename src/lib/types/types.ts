@@ -20,7 +20,7 @@ enum Person {
   Maurice = "Maurice Herman",
 }
 
-type Author = Pick<CardDetailed, "img"> & {
+type Author = Pick<CardDetailed, "img" | "id"> & {
   name: Person
   position: Position
 }

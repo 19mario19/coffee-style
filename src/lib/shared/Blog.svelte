@@ -55,8 +55,8 @@
   }
 
   .card {
-   display: flex;
-   flex-direction: column;
+    display: flex;
+    flex-direction: column;
 
     gap: 2rem;
 
@@ -67,8 +67,6 @@
     margin: 0 auto;
 
     margin-bottom: 3rem;
-
-   
   }
 
   .card > * > * {
@@ -87,10 +85,9 @@
       height: auto;
     }
 
-    
-  .card > * > * {
-    text-align: center;
-  }
+    .card > * > * {
+      text-align: center;
+    }
   }
 
   .top {

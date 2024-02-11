@@ -6,16 +6,19 @@ import three from "$lib/img/Author/3.jpg"
 
 const authors: Author[] = [
   {
+    id: 0,
     name: Person.Fred,
     position: Position.Owner,
     img: one,
   },
   {
+    id: 1,
     name: Person.Isabel,
     position: Position.MugDesigner,
     img: two,
   },
   {
+    id: 3,
     name: Person.Maurice,
     position: Position.MugDesigner,
     img: three,
