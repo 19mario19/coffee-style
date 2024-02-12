@@ -78,10 +78,20 @@
           <div class="filters">
             <div class="left">
               {#if currentFilters[0]?.name}
-                <button>{currentFilters[0]?.name}</button>
+                <button
+                  on:click={() => {
+                    currentFilters[0] = null
+                    activeAuthor = null
+                  }}>{currentFilters[0]?.name}</button
+                >
               {/if}
               {#if currentFilters[1]}
-                <button>{currentFilters[1]}</button>
+                <button
+                  on:click={() => {
+                    currentFilters[1] = null
+                    activeCategory = null
+                  }}>{currentFilters[1]}</button
+                >
               {/if}
             </div>
 
