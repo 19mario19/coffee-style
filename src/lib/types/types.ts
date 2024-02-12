@@ -117,7 +117,7 @@ type Blog = Omit<CardDetailed, "buttonName"> &
   }
 
 enum ContainerDimentions {
-  Big = "max-width: 1260px;",
+  Big = "max-width: 1460px;",
   Medium = "max-width: 1100px",
   Small = "max-width: 1000px",
 }

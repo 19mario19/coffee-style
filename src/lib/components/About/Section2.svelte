@@ -40,12 +40,14 @@
     width: 100%; /* Adjust image width as needed */
     height: 400px; /* Maintain aspect ratio */
     margin-right: 1rem; /* Add spacing between image and details */
+    margin-bottom: 1rem;
     object-fit: cover;
   }
 
   .details {
     display: flex;
     flex-direction: column;
+    gap: .5rem;
   }
 
   h3 {
@@ -56,6 +58,8 @@
   p {
     margin: 0; /* Remove default margin */
     font-size: 1rem; /* Adjust font size as needed */
-    color: #666; /* Adjust color as needed */
+    color:var(--primary-color); /* Adjust color as needed */
+    font-size: 14px;
+    letter-spacing: 1.1px;
   }
 </style>
