@@ -7,5 +7,8 @@ export const load = (async ({ fetch }) => {
   const responseAuthors = await fetch("/api/authors")
   const { authors } = await responseAuthors.json()
 
-  return { aboutCards, authors }
+  const responseTimeline = await fetch("/api/timeline")
+  const timeline = await responseTimeline.json()
+
+  return { aboutCards, authors, timeline }
 }) satisfies PageServerLoad
