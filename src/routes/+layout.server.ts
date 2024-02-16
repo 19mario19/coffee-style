@@ -10,7 +10,6 @@ let navbarList: NavbarList = {
     { id: 2, name: "Blog", link: Route.Blog },
     { id: 3, name: "About", link: Route.About },
     { id: 4, name: "Contact", link: Route.Contact },
-    { id: 5, name: "Style Guide", link: Route.StyleGuide },
   ],
   active: { id: 0, name: "Home", link: Route.Home },
 }

@@ -10,6 +10,8 @@
 
   export let data: PageData
 
+
+
 </script>
 
 <Section1 section1={data.section1} />

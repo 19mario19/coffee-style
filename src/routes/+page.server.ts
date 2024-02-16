@@ -33,5 +33,6 @@ export const load = (async ({ fetch }) => {
     notFeaturedProducts,
     featuredBlogs,
     notFeaturedBlogs,
+
   }
 }) satisfies PageServerLoad

@@ -25,7 +25,6 @@
 
   export let blogs: Blog[]
 
-
   export let products: Product[]
 
   let filteredProducts: Product[] = [...products]
@@ -38,7 +37,6 @@
       )
     }
   }
-
 </script>
 
 <Container dimentions={ContainerDimentions.Medium}>
@@ -156,5 +154,19 @@
   }
   .categories ul::before {
     left: calc(100% + 10px);
+  }
+
+  @media screen and (max-width: 717px) {
+    ul {
+      flex-direction: column;
+    }
+
+    button {
+      display: block;
+    }
+    ul::before,
+    ul::after {
+      display: none;
+    }
   }
 </style>
