@@ -11,7 +11,7 @@ const cartListInitial: CartList = {
 const shoppingCart = writable(cartListInitial)
 
 // Log changes to the store
-// shoppingCart.subscribe((value) => console.log("Store", value))
+shoppingCart.subscribe((value) => console.log("Store", value))
 
 /**
  * Interface for ShoppingCart class.

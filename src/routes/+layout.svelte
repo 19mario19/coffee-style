@@ -10,7 +10,7 @@
   import { page } from "$app/stores"
 
 
-  let notToRenderSubscribe = ["contact",]
+  let renderSubscribe = ["","products","blog"]
 
   let param = $page.route.id?.split("/") ?? []
 
@@ -23,7 +23,7 @@
 <div class="layout">
   <Cart cartList={$shoppingCart} />
   <slot />
-  {#if !notToRenderSubscribe.includes(param[1])}
+  {#if renderSubscribe.includes(param[param.length - 1])}
     <Subscribe />
   {/if}
   <Footer />

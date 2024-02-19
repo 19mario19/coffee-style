@@ -7,14 +7,19 @@ import three from "$lib/img/Products/3.jpg"
 const db: Product[] = [
   {
     id: 1,
-    title: "Product One",
-    description: "Description for Product One",
-    details: "Details for Product One",
+    title: "Red Love Cup",
+    description:
+      "Amet suscipit omnis eum necessitatibus quos doloribus. Ut placeat et corrupti. Reprehenderit quisquam omnis omnis velit commodi. Animi quaerat sed repellendus.",
+
+    details:
+      "Id cupiditate cum sequi eum neque dolorem dicta quisquam non. Quas vel perferendis accusantium eum cum voluptates libero doloribus voluptates. A et quia qui quia. Sunt tempore est sit facilis. Amet suscipit omnis eum necessitatibus quos doloribus. Ut placeat et corrupti. Reprehenderit quisquam omnis omnis velit commodi. Animi quaerat sed repellendus. Perspiciatis rerum commodi dolore consequatur voluptates accusantium velit. Aut dicta iusto neque ea voluptates. Ducimus est ut neque sunt eum iusto. Consequatur quia occaecati enim omnis repudiandae labore.",
+
     img: one,
     oldPrice: 24.99,
+    newPrice: 36.99,
     sale: false,
     featured: true,
-    dimensions: { length: 1.5, height: 2.2, width: 1.0, weight: 1.8 },
+    dimensions: { length: 56.0, height: 30.0, width: 12.0, weight: 12 },
     category: [ECategory.Mugs],
   },
   {

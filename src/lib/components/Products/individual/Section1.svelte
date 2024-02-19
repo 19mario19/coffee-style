@@ -7,14 +7,14 @@
 </script>
 
 <div class="section1">
-  <Container>
     <IndividualProduct {product} />
-  </Container>
+  
 </div>
 
 <style>
   .section1 {
     display: flex;
+
 
   }
 </style>
