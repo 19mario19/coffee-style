@@ -17,7 +17,7 @@ const db: Product[] = [
     img: one,
     oldPrice: 24.99,
     newPrice: 36.99,
-    sale: false,
+    sale: true,
     featured: true,
     dimensions: { length: 56.0, height: 30.0, width: 12.0, weight: 12 },
     category: [ECategory.Mugs],

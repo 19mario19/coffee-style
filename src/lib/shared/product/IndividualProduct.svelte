@@ -38,28 +38,36 @@
 <Container dimentions={ContainerDimentions.Medium}>
   <div class="individualProduct">
     <div class="img">
-      <img src={product.img} alt="" />
+      <img src={product.img} alt={product.description} />
+      {#if product.sale}
+        <p class="sale">On Sale.</p>
+      {/if}
     </div>
     <div class="content">
       <h2>{product.title}</h2>
-      <p>{product.description}</p>
-      <div class="price">
-        <p>
-          {#if product.newPrice}
-            <span class="new-price">{product.newPrice}</span>
-          {/if}
-          <span class="old-price">{product.oldPrice}</span>
-        </p>
-      </div>
-      <div class="input">
-        <input
-          type="number"
-          name="cart-item"
-          min="0"
-          max="10"
-          bind:value={quantity}
-        />
-        <button on:click={() => addToCart(product.id)}>ADD TO CART</button>
+      <p class="description">{product.description}</p>
+      <div class="bottom">
+        <div class="price-container">
+          <p class="price">
+            {#if product.newPrice}
+              ${product.newPrice.toFixed(2)} USD
+            {/if}
+            <span class="oldPrice" class:crossed={product.newPrice}>
+              ${product.oldPrice.toFixed(2)} USD
+            </span>
+          </p>
+          <h4>QUANTITY</h4>
+        </div>
+        <div class="input">
+          <input
+            type="number"
+            name="cart-item"
+            min="0"
+            max="10"
+            bind:value={quantity}
+          />
+          <button on:click={() => addToCart(product.id)}>ADD TO CART</button>
+        </div>
       </div>
     </div>
     <div class="details">
@@ -68,10 +76,18 @@
     </div>
     <div class="dimensions">
       <h3>Dimensions:</h3>
-      <p class="dot"><span>Length (in):</span> {product.dimensions.length}</p>
-      <p class="dot"><span>Height (in):</span> {product.dimensions.height}</p>
-      <p class="dot"><span>Width (in):</span> {product.dimensions.width}</p>
-      <p class="dot"><span>Weight (in):</span> {product.dimensions.weight}</p>
+      <ul>
+        {#each Object.entries(product.dimensions) as [key, value]}
+          <li>
+            {key.charAt(0).toUpperCase() + key.slice(1)}
+            {#if key === "weight"}
+              (oz)
+            {:else}
+              (in)
+            {/if}: <span>{value}</span>
+          </li>
+        {/each}
+      </ul>
     </div>
   </div>
 </Container>
@@ -84,10 +100,23 @@
     gap: 5rem;
   }
 
+  ul {
+    list-style-type: disc;
+  }
+
   p,
   h3,
-  h2 {
+  h2,
+  h4,
+  li {
     text-align: start;
+  }
+
+  h4 {
+    font-size: 12px;
+    letter-spacing: 2px;
+    font-weight: 500;
+    line-height: 18px;
   }
 
   .img img {
@@ -95,12 +124,47 @@
     aspect-ratio: 1;
     object-fit: cover;
   }
+  .img {
+    position: relative;
+  }
 
+  p.sale {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+
+    font-size: 16px;
+    font-weight: bold;
+
+    background-color: white;
+    color: var(--brown-color);
+    padding: 0.5rem 1rem;
+  }
+
+  p.price {
+    color: var(--brown-color);
+    font-size: 30px;
+  }
+
+  span.crossed {
+    text-decoration-line: line-through;
+  }
+
+  p .oldPrice {
+    color: var(--secondary-05-color);
+    font-size: 16px;
+  }
   .content {
     display: flex;
     flex-direction: column;
-    gap: 1rem;
+    gap: 1.5rem;
     justify-content: center;
+  }
+
+  .bottom {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
   }
 
   .input {
@@ -136,11 +200,32 @@
     color: var(--secondary-color);
   }
 
-  @media screen and (max-width: 1000px) {
+  p.description {
+    font-size: 18px;
+    line-height: 30px;
+  }
+
+  li,
+  li span {
+    font-size: 16px;
+    line-height: 28px;
+    cursor:text;
+  }
+
+  li {
+    color: var(--secondary-color);
+    margin-left: .9rem;
+  }
+
+  li span {
+    color: var(--primary-color);
+  }
+
+  @media screen and (max-width: 950px) {
     .individualProduct {
       display: flex;
       flex-direction: column;
-      gap: 1rem;
+      gap: 1.5rem;
       width: 100%;
     }
   }
