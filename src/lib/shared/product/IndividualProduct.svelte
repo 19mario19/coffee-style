@@ -17,7 +17,7 @@
   function addToCart(id: ID) {
     console.log(id, quantity)
 
-    // conver product to cart item
+    // convert product to cart item
     let cartItem: CartItem = {
       id,
       quantity,
