@@ -61,7 +61,8 @@
 
   @media screen and (max-width: 717px) {
     .section1 {
-      grid-template-columns: 1fr;
+      display: flex;
+      flex-direction: column-reverse;
     }
   }
 </style>
