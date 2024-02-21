@@ -8,10 +8,9 @@
   import Section6 from "$lib/components/Home/Section6.svelte"
   import Section7 from "$lib/components/Home/Section7.svelte"
 
+  import Subscribe from "$lib/shared/Subscribe.svelte"
+
   export let data: PageData
-
-
-
 </script>
 
 <Section1 section1={data.section1} />
@@ -21,6 +20,5 @@
 <Section5 />
 <Section6 />
 <Section7 featuredBlogs={data.featuredBlogs} />
+<Subscribe />
 
-<style>
-</style>

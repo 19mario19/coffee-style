@@ -10,9 +10,6 @@
   import { page } from "$app/stores"
 
 
-  let renderSubscribe = ["","products","blog"]
-
-  let param = $page.route.id?.split("/") ?? []
 
   export let data: LayoutData
 </script>
@@ -23,9 +20,6 @@
 <div class="layout">
   <Cart cartList={$shoppingCart} />
   <slot />
-  {#if renderSubscribe.includes(param[param.length - 1])}
-    <Subscribe />
-  {/if}
   <Footer />
 </div>
 

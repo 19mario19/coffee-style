@@ -185,11 +185,22 @@
     color: white;
     border: none;
     cursor: pointer;
-    transition: background-color 0.3s;
+    transition: var(--a-medium);
+    outline: 2px solid var(--primary-05-color);
   }
   .content button,
   .content input {
     padding: 1rem 2rem;
+  }
+  .content button:hover {
+    outline: 2px solid var(--primary-color);
+    background-color: white;
+    color: var(--primary-color);
+  }
+  .content button:active {
+    outline: 2px solid var(--brown-color);
+    background-color: var(--secondary-color);
+    color: white;
   }
 
   .details h3,
@@ -209,12 +220,12 @@
   li span {
     font-size: 16px;
     line-height: 28px;
-    cursor:text;
+    cursor: text;
   }
 
   li {
     color: var(--secondary-color);
-    margin-left: .9rem;
+    margin-left: 0.9rem;
   }
 
   li span {
