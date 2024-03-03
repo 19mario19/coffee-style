@@ -3,7 +3,7 @@
   import CProduct from "$lib/shared/Product.svelte"
   import Title from "$lib/shared/Title.svelte"
   import { ContainerDimentions, type Product } from "$lib/types/types"
-  let title = "FEATURED MUGS"
+  export let title = "FEATURED MUGS"
 
   export let featuredProducts: Product[] = []
 </script>
