@@ -151,5 +151,8 @@
     .overlay {
       inset: 0;
     }
+    .top {
+      margin: 2rem 1rem;
+    }
   }
 </style>

@@ -170,6 +170,7 @@
     .section2 {
       grid-template-columns: 1fr;
       gap: 2rem;
+      padding: 2rem 1rem;
     }
     .left {
       border: none;
