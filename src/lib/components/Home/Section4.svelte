@@ -11,7 +11,7 @@
   <Title {title}>
     <div class="section4">
       <div class="product-list">
-        {#each notFeaturedProducts as product (product.id)}
+        {#each notFeaturedProducts.slice(0,6) as product (product.id)}
           <CProduct {product} />
         {/each}
       </div>

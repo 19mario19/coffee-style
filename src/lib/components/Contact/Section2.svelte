@@ -165,4 +165,14 @@
     background-color: white;
     color: var(--primary-color);
   }
+
+  @media screen and (max-width: 717px){
+    .section2 {
+      grid-template-columns: 1fr;
+      gap: 2rem;
+    }
+    .left {
+      border: none;
+    }
+  }
 </style>
