@@ -166,7 +166,8 @@
   /* end author */
 
   .main {
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr 5fr;
     gap: 3rem;
   }
   .date {
@@ -174,6 +175,7 @@
     align-items: center;
     justify-content: center;
     grid-template-columns: 1fr 3fr;
+    margin-bottom: 2rem;
   }
   .date .line {
     height: 1px;
