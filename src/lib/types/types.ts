@@ -106,11 +106,10 @@ enum EBlogCategory {
 
 type Paragraph = Pick<CardDetailed, "subtitle" | "description" | "img"> & {
   quotes?: string
-  description2?: string
-  description3?: string
+  subheading?: string
 }
 
-type Blog = Omit<CardDetailed, "buttonName"> &
+type Blog = Omit<CardDetailed, "buttonName" | "subtitle"> &
   Pick<Product, "featured"> & {
     list: Paragraph[]
     category: EBlogCategory[]
