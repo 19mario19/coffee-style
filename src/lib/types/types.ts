@@ -23,6 +23,7 @@ enum Person {
 type Author = Pick<CardDetailed, "img" | "id"> & {
   name: Person
   position: Position
+  description: string
 }
 
 enum Route {

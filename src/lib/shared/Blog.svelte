@@ -9,7 +9,7 @@
     <div class="overlay" />
     <img src={blog.img} alt={blog.title} />
 
-    <a href={`/blogs/${blog.id}`}>
+    <a href={`/blog/${blog.id}`}>
       <button class="details">READ THE WHOLE STORY</button>
     </a>
   </div>

@@ -9,18 +9,21 @@ const authors: Author[] = [
     id: 0,
     name: Person.Fred,
     position: Position.Owner,
+    description: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fugiat, cumque!",
     img: one,
   },
   {
     id: 1,
     name: Person.Isabel,
     position: Position.MugDesigner,
+    description: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fugiat, cumque!",
     img: two,
   },
   {
     id: 3,
     name: Person.Maurice,
     position: Position.MugDesigner,
+    description: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fugiat, cumque!",
     img: three,
   },
 ]

@@ -20,19 +20,24 @@ const dbBlogs: Blog[] = [
     featured: true,
     list: [
       {
-        subtitle: "Subtitle 1",
-        description: "Description 1",
-        // img: "image-url-1.jpg",
-        quotes: "Quote 1",
-        description2: "Second Description 1",
-        description3: "Third Description 1",
+        subtitle: "Lorem ipsum dolor",
+        description:
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce id ligula eget tortor tincidunt tincidunt. Nam congue justo sit amet velit varius tempus.",
+        quotes: "“Coffee is a language in itself.”",
+        description2:
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio.",
+        description3:
+          "Phasellus auctor felis quis risus venenatis, vel dapibus elit laoreet. Duis posuere.",
       },
       {
-        subtitle: "Subtitle 2",
-        description: "Description 2",
-        quotes: "Quote 2",
-        description2: "Second Description 2",
-        description3: "Third Description 2",
+        subtitle: "Coffee smells",
+        description:
+          "Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum luctus suscipit libero, ac pellentesque nulla efficitur non.",
+        quotes: "“Coffee smells like freshly ground heaven.”",
+        description2:
+          "Vivamus eget dolor eu mi consectetur interdum nec in elit. Mauris vel ex.",
+        description3:
+          "Sed fermentum ipsum ac magna congue, sit amet vestibulum nisl placerat. Ut ultricies.",
       },
     ],
     author: authorsRecord[Person.Fred],
