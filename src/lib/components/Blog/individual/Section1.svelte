@@ -90,7 +90,7 @@
     display: flex;
     flex-direction: column;
     gap: 2rem;
-    margin: 6rem 0;
+    margin: 1rem 0;
 
     max-width: 65%;
   }
@@ -146,6 +146,11 @@
     font-weight: 400;
     font-size: 14px;
     line-height: 22px;
+  }
+
+  .top span img {
+    max-height: 400px;
+    object-fit: cover;
   }
 
   .author a {

@@ -129,6 +129,14 @@
   ul {
     display: flex;
     gap: 1.8rem;
+
+    align-items: center;
+  }
+
+  button.cart {
+    display: flex;
+    align-items: center;
+
   }
 
   button.cart,
