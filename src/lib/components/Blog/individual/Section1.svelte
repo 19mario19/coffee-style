@@ -223,6 +223,16 @@
   }
 
   @media screen and (max-width: 717px) {
+
+    .top-description {
+        min-width: 100%;
+    }
+
+    .content {
+        border: none;
+    }
+
+
     .main {
       display: flex;
       flex-direction: column-reverse;
@@ -243,7 +253,7 @@
     }
 
     .author span img {
-      width: 50%;
+      width: 100%;
       height: 300px;
     }
 
