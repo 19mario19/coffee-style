@@ -35,6 +35,12 @@
     z-index: 999;
   }
 
+  @media screen and (max-width: 717px){
+    .featured-posts{
+        grid-template-columns: 1fr;
+    }
+  }
+
   a {
     background-color: var(--primary-color);
     color: white;
