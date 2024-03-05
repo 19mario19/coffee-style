@@ -17,3 +17,8 @@ let navbarList: NavbarList = {
 export const load = (async () => {
   return { navbarList }
 }) satisfies LayoutServerLoad
+
+
+// preredners everything
+
+export const prerender = true
