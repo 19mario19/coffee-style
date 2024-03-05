@@ -25,7 +25,7 @@
   img {
     width: 100%;
     height: 100%;
-    min-height: 300px;
+    min-height: 340px;
     object-fit: cover;
   }
 

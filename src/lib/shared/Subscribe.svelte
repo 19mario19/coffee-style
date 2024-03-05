@@ -3,17 +3,16 @@
   import Container from "./Container.svelte"
 </script>
 
-<Container>
+<Container dimentions={ContainerDimentions.Big}>
   <div class="subscribe">
-      <div class="content">
-        <h3>SIGN UP AND GET FREE COFFEE BAGS</h3>
-        <h2>Coffee Updates</h2>
-      </div>
-      <div class="input">
-        <input type="text" placeholder="CUSTOMER@COFFEESTYLE.IO" />
-        <button>SUBSCRIBE</button>
-      </div>
- 
+    <div class="content">
+      <h3>SIGN UP AND GET FREE COFFEE BAGS</h3>
+      <h2>Coffee Updates</h2>
+    </div>
+    <div class="input">
+      <input type="text" placeholder="CUSTOMER@COFFEESTYLE.IO" />
+      <button>SUBSCRIBE</button>
+    </div>
   </div>
 </Container>
 
@@ -26,6 +25,7 @@
     justify-content: center;
     align-items: center;
     padding: 6rem 0;
+    width: 100%;
   }
 
   .content {
@@ -113,18 +113,17 @@
 
   /* Media */
   @media screen and (max-width: 717px) {
-
-
     .subscribe {
-        padding: 3rem 2rem;
+      padding: 3rem 2rem;
     }
-
-      button,
-      input {
-        width: 100%;
-      }
-
-
+    h3::before,
+    h3::after {
+      content: none;
+    }
+    button,
+    input {
+      width: 100%;
+    }
 
     .input {
       flex-direction: column;

@@ -19,7 +19,7 @@
           rich narratives behind your favorite brews.
         </p>
       </div>
-      <Title title="featured-posts">
+      <Title title="featured posts">
         <div class="featured-posts">
           {#each firstTwo as blog (blog.id)}
             <CBlog {blog} />

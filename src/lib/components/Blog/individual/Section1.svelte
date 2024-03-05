@@ -2,9 +2,10 @@
   import Container from "$lib/shared/Container.svelte"
   import { ContainerDimentions, type Blog } from "$lib/types/types"
   export let blogData: Blog
+  
 </script>
 
-<Container>
+<Container dimentions={ContainerDimentions.Big}>
   <div class="section1">
     <Container dimentions={ContainerDimentions.Medium}>
       <div class="top-description">
@@ -67,7 +68,9 @@
         </div>
       </Container>
     </div>
-  </div>
+</div>
+
+
 </Container>
 
 <style>
@@ -149,7 +152,7 @@
   }
 
   .top span img {
-    max-height: 400px;
+    max-height: 500px;
     object-fit: cover;
   }
 
@@ -173,7 +176,7 @@
   .main {
     display: grid;
     grid-template-columns: 1fr 5fr;
-    gap: 3rem;
+    gap: 3.5rem;
   }
   .date {
     display: grid;
@@ -239,6 +242,9 @@
         border: none;
     }
 
+     .top span img {
+        max-width: 100%;
+     }
 
     .main {
       display: flex;

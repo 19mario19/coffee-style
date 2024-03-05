@@ -52,14 +52,16 @@
       <div class="categories">
         <ul>
           {#each navbarList.list as item, index (index)}
-            <button
-              on:click={() => {
-                setActive(item)
-                filter(item.name)
-              }}
-              class:active={item.id === navbarList.active.id}
-              >{item?.name.toUpperCase()}</button
-            >
+            <li>
+              <button
+                on:click={() => {
+                  setActive(item)
+                  filter(item.name)
+                }}
+                class:active={item.id === navbarList.active.id}
+                >{item?.name.toUpperCase()}</button
+              >
+            </li>
           {/each}
         </ul>
       </div>
@@ -124,11 +126,11 @@
     flex-direction: column;
     gap: 1rem;
     margin: 1rem 0;
-    margin-top: 7rem;
+    margin-top: 5rem;
   }
 
   .categories {
-    margin: 2rem;
+    margin: 1rem;
   }
 
   .categories ul {
@@ -157,8 +159,13 @@
   }
 
   @media screen and (max-width: 717px) {
-    ul {
+    .categories ul {
       flex-direction: column;
+      width: 100%;
+    }
+
+    ul li button {
+      width: 100%;
     }
 
     button {
