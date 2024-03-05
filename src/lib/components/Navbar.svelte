@@ -133,18 +133,27 @@
     align-items: center;
   }
 
-  button.cart {
-    display: flex;
-    align-items: center;
-
-  }
-
+  
   button.cart,
   li {
     color: var(--primary-color);
     opacity: 0.5;
     font-size: 15px;
     font-weight: 500;
+    
+    
+    
+    /* border: 2px solid red; */
+  }
+  button.cart {
+    display: flex;
+
+    align-items: center;
+    
+
+    /* border: 2px solid green; */
+
+
   }
 
   li {
