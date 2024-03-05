@@ -6,7 +6,6 @@
 
   export let addresses: Address[]
 
-  console.log(addresses)
 </script>
 
 <Container dimentions={ContainerDimentions.Big}>

@@ -10,12 +10,9 @@
   const shoppingCart = new ShoppingCart()
   const toggleCart = new Toggle()
 
-  console.log(product)
-
   let quantity = 1
 
   function addToCart(id: ID) {
-    console.log(id, quantity)
 
     // convert product to cart item
     let cartItem: CartItem = {

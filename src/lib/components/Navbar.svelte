@@ -56,7 +56,7 @@
         </div>
       </div>
       <!-- end desktop -->
-      
+
       <div class="mobile">
         <div class="left">
           <a href={Route.Home} on:click={disableMenu}>
@@ -133,27 +133,17 @@
     align-items: center;
   }
 
-  
   button.cart,
   li {
     color: var(--primary-color);
     opacity: 0.5;
     font-size: 15px;
     font-weight: 500;
-    
-    
-    
-    /* border: 2px solid red; */
   }
   button.cart {
     display: flex;
 
     align-items: center;
-    
-
-    /* border: 2px solid green; */
-
-
   }
 
   li {
@@ -242,7 +232,7 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
-      padding: 0 .2rem;
+      padding: 0 0.2rem;
     }
 
     .right ul {

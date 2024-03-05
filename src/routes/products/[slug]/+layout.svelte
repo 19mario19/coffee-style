@@ -6,8 +6,6 @@
   import Subscribe from "$lib/shared/Subscribe.svelte"
 
   export let data: LayoutData
-
-  console.log(data)
 </script>
 
 <div class="layout">

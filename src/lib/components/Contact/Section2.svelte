@@ -10,7 +10,7 @@
       <p class="subtitle">
         Drop us your message and I'll get back to you as soon as possible.
       </p>
-      <form on:submit|preventDefault={() => console.log("Submit")}>
+      <form>
         <div class="input">
           <label>
             <p>NAME</p>
@@ -166,7 +166,7 @@
     color: var(--primary-color);
   }
 
-  @media screen and (max-width: 717px){
+  @media screen and (max-width: 717px) {
     .section2 {
       grid-template-columns: 1fr;
       gap: 2rem;
