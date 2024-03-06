@@ -37,6 +37,6 @@
   }
 
   .title p::before {
-    left: calc(100% + 5px);
+    left: calc(100% + 15px);
   }
 </style>
