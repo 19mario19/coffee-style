@@ -202,37 +202,7 @@ p {
     --a-fast: all .18s ease;
 
 
-    /* testing new palette */
-    --primary-color: #1d1f2e;
-    /* Intense primary color */
-    --primary-05-color: #161822;
-    /* Darker shade */
-    --primary-03-color: #0d0f17;
-    /* Even darker shade */
-    --primary-01-color: #020306;
-    /* Almost black */
 
-    --secondary-color: #60626c;
-    /* Intense secondary color */
-    --secondary-05-color: #53555f;
-    /* Darker shade */
-
-    --light-gray: #fafafa;
-    /* Unchanged light gray */
-    --dark-blue: #050827;
-    /* Unchanged dark blue */
-
-    --gray-color: #808080;
-    /* Slightly lighter shade of gray */
-
-    --brown-color: #a25f4b;
-    /* Intense brown color */
-    --brown-05-color: #8b4a38;
-    /* Darker shade */
-    --brown-03-color: #662d1e;
-    /* Even darker shade */
-    --brown-01-color: #3d160b;
-    /* Almost black */
 }
 
 
@@ -241,5 +211,4 @@ p {
     margin: 0 auto;
     padding: 1rem;
 
-    /* border: 1px solid green; */
 }
