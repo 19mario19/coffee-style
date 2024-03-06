@@ -14,6 +14,10 @@
   export let data: LayoutData
 </script>
 
+<svelte:head>
+ <title>{$page.data.title}</title>
+</svelte:head>
+
 <div class="fixed">
   <Navbar data={data.navbarList} />
 </div>

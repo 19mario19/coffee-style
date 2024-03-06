@@ -10,5 +10,7 @@ export const load = (async ({ fetch }) => {
   const responseTimeline = await fetch("/api/timeline")
   const timeline = await responseTimeline.json()
 
-  return { aboutCards, authors, timeline }
+  const title = "About"
+
+  return { title, aboutCards, authors, timeline }
 }) satisfies PageServerLoad

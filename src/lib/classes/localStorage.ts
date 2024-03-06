@@ -2,7 +2,7 @@ import { writable } from "svelte/store"
 
 const localStorageList = writable<string[]>([])
 
-localStorageList.subscribe((v) => console.log("LS store: ", v))
+// localStorageList.subscribe((v) => console.log("LS store: ", v))
 
 
 enum LSNames {

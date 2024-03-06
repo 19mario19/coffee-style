@@ -7,5 +7,6 @@ export const load = (async ({ fetch }) => {
   const blogResponse = await fetch("/api/blogs")
   const { blogs } = await blogResponse.json()
 
-  return { products, blogs }
+  const title = `Products`
+  return { title, products, blogs }
 }) satisfies PageServerLoad

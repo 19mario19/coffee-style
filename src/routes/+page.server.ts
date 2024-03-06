@@ -26,13 +26,15 @@ export const load = (async ({ fetch }) => {
   const response2 = await fetch("/api/blogs")
   const { featuredBlogs, notFeaturedBlogs } = await response2.json()
 
+  const title = `Home`
+
   return {
+    title,
     section1,
     section2,
     featuredProducts,
     notFeaturedProducts,
     featuredBlogs,
     notFeaturedBlogs,
-
   }
 }) satisfies PageServerLoad

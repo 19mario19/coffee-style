@@ -15,7 +15,6 @@ const navActiveStore = writable<NavbarItem>(navbarItem)
 
 CLocalStorage.get("active") && navActiveStore.set(CLocalStorage.get("active"))
 
-navActiveStore.subscribe((v) => console.log("Active is => ", v))
 
 interface INavbarActive {
   setActive(newActive: NavbarItem): void
