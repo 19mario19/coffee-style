@@ -1,10 +1,16 @@
 <script lang="ts">
   import Container from "$lib/shared/Container.svelte"
-  import { ContainerDimentions, Route, type NavbarList } from "$lib/types/types"
+  import {
+    ContainerDimentions,
+    Route,
+    type NavbarList,
+    type NavbarItem,
+  } from "$lib/types/types"
   import cart from "$lib/img/Navbar/cart.png"
   import mobileIcon from "$lib/img/Navbar/mobile.png"
   import { shoppingCart as store } from "$lib/classes/shoppingCart"
   import { Toggle } from "$lib/classes/cartToggle"
+  import { navActiveStore, CNavbarActive } from "$lib/classes/navActive"
   const toggleCart = new Toggle()
   function showCart() {
     toggleCart.switch()
@@ -20,6 +26,12 @@
     active: { id: 0, name: "Home", link: Route.Home },
   }
 
+  function setActive(newActive: NavbarItem) {
+    const ls = new CNavbarActive()
+    ls.setActive(newActive)
+    data.active = newActive
+  }
+
   let showMenu = true
   function disableMenu() {
     showMenu = true
@@ -27,6 +39,8 @@
   function toggleMenue() {
     showMenu = !showMenu
   }
+
+  $: data.active = $navActiveStore
 </script>
 
 <div class="container-wrapper">
@@ -41,7 +55,7 @@
         <div class="right">
           <ul>
             {#each data.list as item}
-              <a on:click={() => (data.active = item)} href={item.link}>
+              <a on:click={() => setActive(item)} href={item.link}>
                 <li class:active={item.id === data.active.id}>
                   {item.name.toUpperCase()}
                 </li>
@@ -69,7 +83,7 @@
               <a
                 on:click={() => {
                   disableMenu()
-                  data.active = item
+                  setActive(item)
                 }}
                 href={item.link}
               >
