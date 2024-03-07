@@ -7,7 +7,7 @@
   import { flip } from "svelte/animate"
 
   const shop: ShoppingCart = new ShoppingCart()
-  
+
   function update() {
     shop.updateStore()
   }
@@ -45,7 +45,7 @@
 
     <div class="cart">
       {#each cartList.products as cartItem (cartItem.id)}
-        <div animate:flip class="cart-item">
+        <div animate:flip={{ duration: 150 }} class="cart-item">
           <div class="left">
             <img src={cartItem.img} alt={cartItem.title} />
             <div class="item-details">
@@ -122,7 +122,7 @@
 
     border-left: 1px solid var(--gray-color);
 
-     transition: var(--a-medium);
+    transition: var(--a-medium);
   }
 
   .wrapper,
@@ -149,12 +149,21 @@
   .cart {
     display: flex;
     flex-direction: column;
+
     width: 100%;
     height: 100%;
-    flex-wrap: wrap;
+
     gap: 20px;
     align-self: flex-start;
-    overflow: hidden;
+
+    overflow-x: hidden;
+    overflow-y: scroll;
+
+    /* border: 2px solid yellow; */
+
+    & > * {
+      /* border: 2px solid green; */
+    }
   }
 
   .cart-item {
@@ -218,9 +227,9 @@
   }
 
   .wrapper.toggleState {
-      opacity: 0;
-      z-index: -1;
-      transform: translateX(100%);
+    opacity: 0;
+    z-index: -1;
+    transform: translateX(100%);
   }
 
   .wrapper {
@@ -228,7 +237,6 @@
     opacity: 1;
     z-index: 999;
   }
-
 
   .wrapper-container.toggleState {
     opacity: 0;
@@ -245,5 +253,22 @@
     .wrapper {
       width: 100%;
     }
+  }
+
+  /* scrollbar */
+  ::-webkit-scrollbar {
+    width: 5px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: var(--secondary-05-color);
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: #f1f1f1;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: var(--primary-color);
   }
 </style>

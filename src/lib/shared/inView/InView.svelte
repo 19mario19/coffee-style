@@ -1,11 +1,4 @@
 <script lang="ts">
-  /**
-   * Even if it works, and I do understand that when intersecting an element,
-   * it fires the event.
-   * But I do not understand how this is accoplished
-   *
-   */
-
   import { inview } from "svelte-inview"
   import type { ObserverEventDetails, Options } from "svelte-inview"
 
