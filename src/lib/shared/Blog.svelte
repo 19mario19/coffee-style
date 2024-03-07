@@ -3,16 +3,9 @@
 
   export let blog: Blog
 
-  import { CNavbarActive } from "$lib/classes/navActive"
   import { Route } from "$lib/types/types"
-  function setActive() {
-    const ls = new CNavbarActive()
-    ls.setActive({
-      id: 11,
-      name: "Random",
-      link: Route.StyleGuide,
-    })
-  }
+  
+  
 </script>
 
 <div class="card">
@@ -20,7 +13,7 @@
     <div class="overlay" />
     <img src={blog.img} alt={blog.title} />
 
-    <a href={`/blog/${blog.id}`} on:click={setActive}>
+    <a href={`/blog/${blog.id}`}>
       <button class="details">READ THE WHOLE STORY</button>
     </a>
   </div>

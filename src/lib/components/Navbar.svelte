@@ -10,7 +10,10 @@
   import mobileIcon from "$lib/img/Navbar/mobile.png"
   import { shoppingCart as store } from "$lib/classes/shoppingCart"
   import { Toggle } from "$lib/classes/cartToggle"
-  import { navActiveStore, CNavbarActive } from "$lib/classes/navActive"
+  import { CLocalStorage } from "$lib/classes/localStorage"
+  import { onMount } from "svelte"
+  import { convertToRoute } from "$lib/functions/convertToRoute"
+
   const toggleCart = new Toggle()
   function showCart() {
     toggleCart.switch()
@@ -26,10 +29,11 @@
     active: { id: 0, name: "Home", link: Route.Home },
   }
 
+  const ls = new CLocalStorage("active")
+
   function setActive(newActive: NavbarItem) {
-    const ls = new CNavbarActive()
-    ls.setActive(newActive)
     data.active = newActive
+    if (newActive.link) ls.set(newActive.link.toLowerCase().split("/")[1])
   }
 
   let showMenu = true
@@ -40,7 +44,12 @@
     showMenu = !showMenu
   }
 
-  $: data.active = $navActiveStore
+  onMount(() => {
+    data.active = convertToRoute(
+      CLocalStorage.get("active").toLowerCase() as string,
+    )
+    console.log(data.active, CLocalStorage.get("active"))
+  })
 </script>
 
 <div class="container-wrapper">

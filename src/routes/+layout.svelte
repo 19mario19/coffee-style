@@ -1,21 +1,30 @@
 <script lang="ts">
   import "../app.css"
   import type { LayoutData } from "./$types"
+  import { Route } from "$lib/types/types"
   import Navbar from "$lib/components/Navbar.svelte"
   import Footer from "$lib/components/Footer.svelte"
   import Cart from "$lib/components/Cart/Cart.svelte"
-  import Subscribe from "$lib/shared/Subscribe.svelte"
- 
+
   import { shoppingCart } from "$lib/classes/shoppingCart"
   import { page } from "$app/stores"
+  import { CLocalStorage } from "$lib/classes/localStorage"
 
-
+  $: route = $page.route.id?.split("/")[1] || "home"
+  if (route) {
+  }
+  
+  $: if ($page.route.id && route) {
+    const lsActive = new CLocalStorage("active")
+    lsActive.set(route.charAt(0).toUpperCase() + route.slice(1))
+    console.log(lsActive.value)
+  }
 
   export let data: LayoutData
 </script>
 
 <svelte:head>
- <title>{$page.data.title}</title>
+  <title>{$page.data.title}</title>
 </svelte:head>
 
 <div class="fixed">

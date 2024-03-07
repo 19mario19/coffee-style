@@ -200,11 +200,7 @@ p {
     --a-slow: all 1s ease;
     --a-medium: all .45s ease;
     --a-fast: all .18s ease;
-
-
-
 }
-
 
 .container {
     max-width: 1260px;

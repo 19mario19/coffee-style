@@ -3,16 +3,8 @@
   
   export let product: Product
   
-  import { CNavbarActive } from "$lib/classes/navActive"
   import  { Route } from "$lib/types/types";
-  function setActive() {
-    const ls = new CNavbarActive()
-    ls.setActive({
-      id: 11,
-      name: "Random",
-      link: Route.StyleGuide,
-    })
-  }
+
 </script>
 
 <div class="card">
@@ -22,7 +14,7 @@
     {#if product.sale}
       <p class="sale">On Sale.</p>
     {/if}
-    <a href={`/products/${product.id}`} on:click={setActive}>
+    <a href={`/products/${product.id}`} >
       <button class="details">EXPLORE MUG</button>
     </a>
   </div>
