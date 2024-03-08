@@ -11,4 +11,4 @@ export const load = (async ({ fetch }) => {
   return { title, products, blogs }
 }) satisfies PageServerLoad
 
-export const prerender = true
+

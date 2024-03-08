@@ -15,4 +15,3 @@ export const load = (async ({ fetch }) => {
   return { title, aboutCards, authors, timeline }
 }) satisfies PageServerLoad
 
-export const prerender = true

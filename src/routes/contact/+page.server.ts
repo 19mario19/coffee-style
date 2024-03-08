@@ -8,5 +8,3 @@ export const load = (async ({ fetch }) => {
   return { title, addresses }
 }) satisfies PageServerLoad
 
-
-export const prerender = true
