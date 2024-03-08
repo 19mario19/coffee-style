@@ -21,4 +21,4 @@ export const load = (async () => {
 
 // preredners everything
 
-// export const prerender = true
+export const prerender = true

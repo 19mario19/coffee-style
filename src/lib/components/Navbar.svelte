@@ -48,7 +48,6 @@
     data.active = convertToRoute(
       CLocalStorage.get("active").toLowerCase() as string,
     )
-    console.log(data.active, CLocalStorage.get("active"))
   })
 </script>
 
