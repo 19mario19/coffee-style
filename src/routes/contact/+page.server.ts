@@ -7,3 +7,6 @@ export const load = (async ({ fetch }) => {
   const title = `Contact`
   return { title, addresses }
 }) satisfies PageServerLoad
+
+
+export const prerender = true

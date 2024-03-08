@@ -38,3 +38,5 @@ export const load = (async ({ fetch }) => {
     notFeaturedBlogs,
   }
 }) satisfies PageServerLoad
+
+export const prerender = true

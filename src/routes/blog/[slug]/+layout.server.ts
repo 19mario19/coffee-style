@@ -6,3 +6,5 @@ export const load = (async ({ fetch }) => {
 
   return { featuredBlogs }
 }) satisfies LayoutServerLoad
+
+export const prerender = true
