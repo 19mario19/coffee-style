@@ -13,11 +13,10 @@
   $: route = $page.route.id?.split("/")[1] || "home"
   if (route) {
   }
-  
+
   $: if ($page.route.id && route) {
     const lsActive = new CLocalStorage("active")
     lsActive.set(route.charAt(0).toUpperCase() + route.slice(1))
-    console.log(lsActive.value)
   }
 
   export let data: LayoutData
