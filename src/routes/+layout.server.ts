@@ -19,6 +19,4 @@ export const load = (async () => {
 }) satisfies LayoutServerLoad
 
 
-// preredners everything
 
-export const prerender = true
