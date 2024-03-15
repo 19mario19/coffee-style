@@ -103,7 +103,7 @@
   .wrapper-container {
     position: fixed;
     inset: 0;
-    z-index: 9999;
+    z-index: 999999;
 
     display: flex;
     justify-content: flex-end;
